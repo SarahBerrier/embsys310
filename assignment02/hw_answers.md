@@ -7,9 +7,11 @@
    > Both the N and V flags are set to 1.  The N register is the negative flag and V is the overflow flag.  0x7FFFFFFF in binary is 0111 for the 7 and 1111 for all of the F's.  The first bit 0 showcased that the number was positive.  When we added 1 to that number it made all of the ones carry over into that first bit of 0 and gave us 0x80000000.  Which in binary is 1000 for the 8 and 0000 for all the rest.  Basically we overflowed our number into the first bit, which changed it from a postive number into a negaive number.  Hence N and V changed to 1 to showcase that the number is negative and that an overflow occurred.  
 
 
-1. If your write all Fs (0XFFFFFFFF) in the Register value for "counter"then step thru the program once to increment "counter"
+1. If your write all Fs (0xFFFFFFFF) in the Register value for "counter"then step thru the program once to increment "counter"
    1. What happens to the value of "counter" in the "Locals"window?
+   > It becomes 0
    1. Please note down if the N and/or V flags are set in the APSR register. And explain why.
+   > Both the N and V flags are set to 0.  0XFFFFFFFF in binary is all 1s.  If we add a 1 to that we carry over every spot to become all zeros.  Therefore the N flag is not set because 0 is not negative.  I do not understand why the overflow wasn't set.  I would expect the bit to the left of our first bit to be incremented incorrectly.  I looked in the books and couldn't find an explanation.  
 
 1. Change the "counter" variable type in your code to "unsignedint". Inject the values "0x7FFFFFFF" then step thru the program to increment the "counter" once:
    1. What is the value of "counter" in the "Locals"window after incrementingfor each value?
