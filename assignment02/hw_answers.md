@@ -39,9 +39,12 @@
    1. What is the value of "counter" at the end of the program (halting at the return 0 statement)
    > 4
    1. Explain why the counter value has changed?
-   > The pointer is pointing to the memory location of counter.  It would appear that our RAM memory addresses start at 0x20000000.  When we set our pointer to that address the effect it had was to set the pointer to point to the same memory location as the counter global variable.     
+   > The pointer is pointing to the memory location of counter.  It would appear that our RAM memory addresses start at 0x20000000.  When we started the program it set our counter variable to that address.  When we set our pointer to that address the effect it had was to set the pointer to point to the same memory location as the counter global variable.
 
 1. Change the setting of IAR to run the same program on the evaluation board
    1. What is the address where "counter" is stored? 
+   > 0x20000000
    1. Is the "counter" variable stored in RAM or ROM?
+   > RAM.  It might start in ROM but when the program starts up it would be copied to RAM so that it can be edited.  
    1. What is the value of "counter" at the end of the program (halting at the return 0 statement).
+   > 4
