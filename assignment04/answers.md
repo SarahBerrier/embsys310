@@ -5,6 +5,7 @@ when using bit-band address?
 > 0x800'0040: 0x2001         MOVS      R0, #1  
 > 0x800'0042: 0x4913         LDR.N     R1, [PC, #0x4c]         ; 0x4242'0980  
 > 0x800'0044: 0x6008         STR       R0, [R1]  
+
 What were the instructions produced when writing to the GPIOx_ODR without using bitbanding?  
 > 0x800'0040: 0x4814         LDR.N     R0, [PC, #0x50]         ; RCC_AHB2ENR  
 > 0x800'0042: 0x6801         LDR       R1, [R0]  
