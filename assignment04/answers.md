@@ -9,7 +9,7 @@ when using bit-band address?
 > 0x800'0042: 0x6801         LDR       R1, [R0]  
 > 0x800'0044: 0xf051 0x0101  ORRS.W    R1, R1, #1  
 > 0x800'0048: 0x6001         STR       R1, [R0]  
-1. Create a function “func1” with 5 arguments and call “func1” from within another function
+2. Create a function “func1” with 5 arguments and call “func1” from within another function
 “func2”. Trace thru the assembler and note:
    1. How does the calling function “func2” pass the values to the called function “func1”?
    1. What extra code did the compiler generate before calling the function “func1” with the
