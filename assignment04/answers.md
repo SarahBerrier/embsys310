@@ -1,7 +1,6 @@
 1. Follow the same steps as we did in the class to blink LED1 (PA5) at a visible rate using the bitband region to enable the clock to Port A, then answer the following:
 
-What instructions does the compiler produce in assembly for “writing” to the GPIO bit?  
-when using bit-band address?
+What instructions does the compiler produce in assembly for “writing” to the GPIO bit when using bit-band address?  
 > 0x800'0040: 0x2001         MOVS      R0, #1  
 > 0x800'0042: 0x4913         LDR.N     R1, [PC, #0x4c]         ; 0x4242'0980  
 > 0x800'0044: 0x6008         STR       R0, [R1]  
